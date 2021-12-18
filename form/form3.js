@@ -15,7 +15,7 @@ export default function form3() {
             <Image style={styles.main1_img} source={{uri: 'https://pccovid.gov.vn/WebPcCovid/Home/banner.png',}} />
             </View>
             <View style={styles.main2}>
-            <Text style={styles.main2_Tittle}>Các tính năng chính của PC_covid</Text>
+            <Text style={styles.main2_Tittle}>Các tính năng chính của PC_covid 10</Text>
             <View style={styles.main2_List}>
                 <Text style={styles.main2_List_item}> <Icon name="circle" color="#30B55C" size={15} /> Cấp quản lý mã QR cá nhân và địa điểm</Text>
                 <Text style={styles.main2_List_item}> <Icon name="circle" color="#30B55C" size={15} /> Quét mã QR</Text>
