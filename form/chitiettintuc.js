@@ -1,16 +1,7 @@
 import React from 'react'
-import { View, Text, SafeAreaView, ScrollView, FlatList, Image, StyleSheet,TouchableOpacity } from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, FlatList, Image, StyleSheet,TouchableOpacity} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
-
-
-
 const DATA = [
-    {
-      id: 1,
-      title: 'Đà Nẵng lập trạm y tế điều trị F0 ở KCN, tiêm vaccine cho người dân tại nhà',
-      Img: "https://photo-baomoi.zadn.vn/w300_r3x2_sm/2021_12_14_83_41196456/1e3fea4c5b0eb250eb1f.jpg",
-      hour: 7,
-    },
     {
       id: 2,
       title: 'Hải Phòng không còn vùng đỏ, hơn 100 ca qua khám sàng lọc, 3 ca tử',
@@ -102,29 +93,43 @@ const DATA = [
         hour: 12,
       },
   ];
+export default function form2() {
 
-
-export default function tintuc() {
     const header=()=>{
         return(
-            <View>
-                <View style={styles.header}>
-                <View style={styles.header_left}>
-                <Icon name="sun-o" color="yellow" size={30} />
-                <Text style={styles.header_leftText}>Chào buổi sáng</Text>
-                </View>
-                <View style={styles.header_right}>
-                <Image style={styles.header_rightImg} source={require("../picture/thiet-ke-logo-tin-tuc-24h-1.png")} />
-                </View>
-            </View>
-            <View style={styles.mainTittle}>
-                <Text style={styles.mainTittle_line}></Text>
-                <Text style={styles.mainTittle_text}>Tin tức</Text>
-                <Text style={styles.mainTittle_line}></Text>
-            </View>
-            </View>
+            <View style={styles.header}>
+            <Text style={styles.headerTittle1}>Đà Nẵng lập trạm y tế điều trị F0 ở KCN, tiêm vaccine cho người dân tại nhà</Text>
+            <Text style={styles.headerHour}>8 giờ trước</Text>
+            <Text style={styles.headerTittle2}>(VTC News) - Đà Nẵng chỉ đạo ngành y tế tổ chức tiêm vaccine ngừa COVID-19 cho người dân ngay tại nhà và lập trạm y tế lưu động để điều trị F0 ở các khu công nghiệp.</Text>
+            <Text style={styles.headerText}>
+            Chỉ đạo tại cuộc họp Ban chỉ đạo phòng chống dịch COVID-19 tối 14/12, bà Ngô Thị Kim Yến, Phó Chủ tịch UBND TP Đà Nẵng chỉ đạo ngành y tế tổ chức tiêm vaccine ngừa COVID-19 cho người dân ngay tại nhà và lập trạm y tế lưu động điều trị F0 ở các khu công nghiệp.
+            </Text>
+            <Text style={styles.headerText}>
+            Theo báo cáo của ngành y tế, đến ngày 14/12, Đà Nẵng đã tiêm mũi 1 cho 966.683 người và mũi 2 cho 919.501 người. Hiện vẫn còn một số trường hợp chưa được tiêm mũi 1 vaccine ngừa COVID-19 dù người dân mong muốn được tiêm. 
+            </Text>
+            <Text style={styles.headerText}>
+            Vì vậy, Phó Chủ tịch UBND TP Đà Nẵng yêu cầu ngành y tế tổ chức các điểm tiêm vaccine ngừa COVID-19 lưu động để tiêm cho người dân. Lực lượng y tế phải đến tận nhà tiêm cho những trường hợp muốn tiêm nhưng không thể di chuyển đến các điểm tiêm.
+            </Text>
+            <Image style={styles.headerImg} source={{ uri: 'https://image.vtc.vn/resize/th/upload/2021/12/14/anh-khu-cong-nghiep-1-20160672.jpg',}} />
+            <Text style={styles.headerImg_tieude}>Đà Nẵng yêu cầu lập các trạm y tế lưu động điều trị F0 là công nhân các khu công nghiệp.</Text>
+            <Text style={styles.headerText}>
+            Phó Chủ tịch UBND TP Đà Nẵng cũng chỉ đạo các đơn vị, địa phương phải rút kinh nghiệm và triển khai hiệu quả các biện pháp phòng, chống dịch khi xuất hiện các ca nhiễm là công nhân từ khu công nghiệp.
+            </Text>
+            <Text style={styles.headerText}>
+            Trong đó, Ban Quản lý Khu công nghệ cao và các khu công nghiệp Đà Nẵng phải sớm thành lập trạm y tế lưu động tại Khu công nghiệp An Đồn (quận Sơn Trà) và Khu công nghiệp Hòa Khánh (quận Liên Chiểu) để cách ly, điều trị F0 là các công nhân.
+            </Text>
+            <Text style={styles.headerText}>
+            Về cách ly F1 tại khu công nghiệp, bà Ngô Thị Kim Yến yêu cầu các đơn vị, địa phương đánh giá, nếu công nhân là F1 đủ điều kiện thì cho cách ly tại nhà, nơi lưu trú. Trường hợp không đủ điều kiện thì tổ chức cho công nhân cách ly tập trung tại các trường học chưa dạy học trực tiếp.
+            </Text>
+            <Text style={[styles.headerText, styles.headerEnd]}>
+            Ngày 14/12, Đà Nẵng tiếp tục ghi nhận số F0 ở mức cao với 176 ca, trong đó có 6 ca cách ly tập trung, 67 ca cách ly tại nhà, 29 trong khu phong tỏa và 74 trường hợp chưa cách ly.
+            </Text>
+
+            <Text style={styles.mainTittle}>Tin khác</Text>
+        </View>
         )
     }
+
 
     const renderItem = ({ item }) => (
         <View style={styles.mainItem}>
@@ -141,48 +146,76 @@ export default function tintuc() {
 
 
     return (
-        <View style={styles.container}>
-         <FlatList
+        <SafeAreaView style={styles.container}>
+        <FlatList
          style={styles.main}
         data={DATA}
         renderItem={renderItem}
         keyExtractor={item => item.id}
         ListHeaderComponent={header}
       />
-        </View>
+      <View style={styles.headerTop}>
+      <TouchableOpacity><Icon name="arrow-left" size={30} color="black" /></TouchableOpacity>
+      <Image style={styles.headerTop_img} source={require("../picture/Báo_Pháp_Luật_TP.HCM.png")} />
+      <TouchableOpacity><Icon name="bars" size={30} color="black" /></TouchableOpacity>
+      </View>
+        </SafeAreaView>
     )
 }
+
+
 const styles = StyleSheet.create({
     container: {
+        position: "relative",
     },
     header: {
         width: "100%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-        backgroundColor: "#22c0d9",
+        marginTop: 70,
+        paddingLeft: 10,
+      paddingRight: 10,
+    },
+    headerTittle1: {
+        width: "100%",
+        fontWeight: "bold",
+        fontSize: 30,
+        color: "black",
         marginBottom: 20,
     },
-    header_left: {
-        width: "40%",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-    },
-    header_leftText: {
-        marginLeft: 5,
-        color: "white",
-        fontSize: 17,
-    },
-    header_right: {
-        width: "30%",
-    },
-    header_rightImg: {
+    headerHour: {
         width: "100%",
-        height: 50,
-        resizeMode: "cover",
+        fontSize: 15,
+        color: "black",
+        marginBottom: 20,
+    },
+    headerTittle2: {
+        width: "100%",
+        fontWeight: "500",
+        fontSize: 25,
+        color: "black",
+        marginBottom: 20,
+    },
+    headerText: {
+        width: "100%",
+        fontSize: 17,
+        color: "black",
+        marginBottom: 10,
+        fontWeight: "400",
+    },
+    headerImg: {
+        width: "100%",
+        height: 300,
+        resizeMode: "contain",
+        backgroundColor: "#f3f3f3",
+    },
+    headerImg_tieude: {
+        width: "100%",
+        textAlign: "center",
+        fontSize: 15,
+        backgroundColor: "#f3f3f3",
+        marginBottom: 20,
+    },
+    headerEnd: {
+        marginBottom: 40,
     },
     mainItem: {
         width: "100%",
@@ -190,8 +223,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         marginBottom: 25,
-        paddingLeft: 15,
-        paddingRight: 15,
+        paddingLeft: 7,
+        paddingRight: 7,
     },
     mainItem_left_btn: {
         width: "45%",
@@ -231,6 +264,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
+        fontSize: 18,
+        paddingLeft: 5,
     },
     mainTittle_line: {
         width: "25%",
@@ -245,5 +280,24 @@ const styles = StyleSheet.create({
         color: "black",
         fontWeight: "bold",
         textTransform: "uppercase",
+    },
+    headerTop: {
+        width: "100%",
+        position: "absolute",
+        top: 0,
+        backgroundColor: "#ede8e8",
+        zIndex: 99,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        paddingLeft: 10,
+        paddingRight: 10,
+        paddingTop: 10,
+        paddingBottom: 10,
+    },
+    headerTop_img: {
+        width: "30%",
+        height: 50,
+        resizeMode: "contain",
     }
   });
